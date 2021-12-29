@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: artemis-db
+  description: Stores all entities for Artemis
+spec:
+  type: database
+  owner: hr
+  system: artemis
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: artemis-backend
+  description: Backend service for Artemis frontend
+spec:
+  type: service
+  lifecycle: production
+  owner: hr
+  system: artemis
+  dependsOn: [Resource:artemis-db]

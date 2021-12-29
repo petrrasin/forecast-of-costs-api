@@ -1,0 +1,7 @@
+site_name: 'forecast-of-costs-api-docs'
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
